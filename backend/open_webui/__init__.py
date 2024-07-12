@@ -23,14 +23,14 @@ def serve(
             "Loading WEBUI_SECRET_KEY from file, not provided as an environment variable."
         )
         if not KEY_FILE.exists():
-            typer.echo(f"Generating a new secret key and saving it to {KEY_FILE}")
+            typer.echo(f"Gerando uma nova chave secreta e salvando-a em {KEY_FILE}")
             KEY_FILE.write_bytes(base64.b64encode(random.randbytes(12)))
         typer.echo(f"Loading WEBUI_SECRET_KEY from {KEY_FILE}")
         os.environ["WEBUI_SECRET_KEY"] = KEY_FILE.read_text()
 
     if os.getenv("USE_CUDA_DOCKER", "false") == "true":
         typer.echo(
-            "CUDA is enabled, appending LD_LIBRARY_PATH to include torch/cudnn & cublas libraries."
+            "Teledoc Journey Medical"
         )
         LD_LIBRARY_PATH = os.getenv("LD_LIBRARY_PATH", "").split(":")
         os.environ["LD_LIBRARY_PATH"] = ":".join(
