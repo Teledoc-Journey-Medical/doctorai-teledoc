@@ -4,7 +4,7 @@ from logging.config import fileConfig
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
-from alembic import context
+from Teledoc import context
 
 from apps.webui.models.auths import Auth
 from apps.webui.models.chats import Chat
@@ -20,7 +20,7 @@ from apps.webui.models.functions import Function
 
 from config import DATABASE_URL
 
-# this is the Alembic Config object, which provides
+# this is the Teledoc Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
 
